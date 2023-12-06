@@ -1,28 +1,57 @@
-# SiteAnnouncements
-Short description and motivation.
+# Site Announcements Engine
 
-## Usage
-How to use my plugin.
+The Site Announcements Engine provides administrator management and site display for timed announcements.
+
+## Prerequisites
+
+   * Ruby >= 3.0
+   * Rails >= 7.0
 
 ## Installation
-Add this line to your application's Gemfile:
+
+To add the engine to a Rails application:
+
+1. Add the gem to your Gemfile:
 
 ```ruby
 gem "site_announcements"
 ```
 
-And then execute:
-```bash
-$ bundle
+2. Run `bundle install`
+
+3. Mount the engine in `config/routes.rb`:
+
+```ruby
+mount SiteAnnouncements::Engine => "/announcements"
 ```
 
-Or install it yourself as:
-```bash
-$ gem install site_announcements
+4. Configure Admin Authorization - this will control who can add/edit/delete announcements:
+
+```ruby
+# config/initializers/site_announcements.rb
+SiteAnnouncements::Engine.config.auth_callback = ->(controller) {
+  # implement whatever auth logic makes sense for your app
+  # controller.current_user.admin?
+}
 ```
 
-## Contributing
-Contribution directions go here.
+If you don't set this, any user can access the admin interface, which is probably not what you want.
 
-## License
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+5. Migrate the database:
+
+```
+rake site_announcements:install:migrations
+rake db:migrate
+```
+
+6. Access engine admin at `/announcements/admin`
+
+## Displaying Announcements
+
+To display active announcements in application views:
+
+```erb
+<%= active_site_announcements %>
+```
+
+This will render Bootstrap alert components for each active announcement.
