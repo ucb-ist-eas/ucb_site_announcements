@@ -9,7 +9,6 @@ class CreateSiteAnnouncementsAnnouncements < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :site_announcements_announcements, :category, unique: true
     add_index :site_announcements_announcements, :start_time
     add_index :site_announcements_announcements, :end_time
   end

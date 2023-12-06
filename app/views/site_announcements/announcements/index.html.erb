@@ -1,0 +1,36 @@
+<h1>Announcements</h1>
+
+<div class="mb-3">
+  <%= link_to "New Announcement", new_announcement_path, class: "btn btn-primary" %>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>Category</th>
+      <th>Enabled</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @announcements.each do |announcement| %>
+      <tr>
+        <td><%= announcement.message %></td>
+        <td><%= announcement.category %></td>
+        <td><%= announcement.enabled ? "Yes" : "No" %></td>
+        <td><%= announcement.start_time %></td>
+        <td><%= announcement.end_time %></td>
+        <td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
+        <td><%= button_to 'Delete', announcement_url(announcement), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New Announcement", new_announcement_path, class: "btn btn-primary" %>

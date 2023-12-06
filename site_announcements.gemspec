@@ -27,4 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "standard"
   spec.add_development_dependency "rspec-rails", "~> 6.1.0"
   spec.add_development_dependency "capybara"
+  spec.add_development_dependency "capybara-screenshot"
+  spec.add_development_dependency "selenium-webdriver"
 end

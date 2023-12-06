@@ -1,5 +1,7 @@
 module SiteAnnouncements
   class Announcement < ApplicationRecord
+    validates_presence_of :message, :category
+
     def self.active
       now = Time.zone.now
 

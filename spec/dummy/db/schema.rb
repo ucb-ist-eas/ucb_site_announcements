@@ -19,7 +19,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_192929) do
     t.boolean "enabled", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category"], name: "index_site_announcements_announcements_on_category", unique: true
     t.index ["end_time"], name: "index_site_announcements_announcements_on_end_time"
     t.index ["start_time"], name: "index_site_announcements_announcements_on_start_time"
   end

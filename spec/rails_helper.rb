@@ -9,7 +9,8 @@ ActiveRecord::Migrator.migrations_paths << File.expand_path("../db/migrate", __d
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'rspec/rails'
+require "rspec/rails"
+require "site_announcements/engine"
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

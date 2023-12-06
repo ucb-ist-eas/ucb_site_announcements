@@ -1,3 +1,4 @@
 SiteAnnouncements::Engine.routes.draw do
-  root 'site_announcements/pages#home'
+  resources :announcements
+  root to: "announcements#index"
 end

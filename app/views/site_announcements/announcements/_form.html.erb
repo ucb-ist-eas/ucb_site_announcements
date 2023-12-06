@@ -1,0 +1,41 @@
+<%= form_with(model: @announcement) do |form| %>
+  <% if @announcement.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+          <% @announcement.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="mb-3">
+    <%= form.label :message %>
+    <%= form.text_field :message, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :category %>
+    <%= form.select :category, [["Info", "info"], ["Warning", "warning"], ["Danger", "danger"]], { prompt: "Choose a category" }, { class: "form-control" } %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :start_time %>
+    <%= form.datetime_field :start_time, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :end_time %>
+    <%= form.datetime_field :end_time, class: "form-control" %>
+  </div>
+
+  <div class="form-check">
+    <%= form.check_box :enabled %>
+    <%= form.label :enabled %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
