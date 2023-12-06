@@ -1784,3 +1784,1461 @@ Processing by SiteAnnouncements::AnnouncementsController#show as HTML
   Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.5ms | Allocations: 930)
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1329)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:41.741611"], ["updated_at", "2023-12-06 22:14:41.741611"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.4ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.7ms | Allocations: 13938)
+Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 21390)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:41.785780"], ["updated_at", "2023-12-06 22:14:41.785780"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.3ms | Allocations: 391)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.8ms | Allocations: 1160)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 2676)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:41.792280"], ["updated_at", "2023-12-06 22:14:41.792280"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 8.8ms | Allocations: 3840)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 9.2ms | Allocations: 4122)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 9.6ms | Allocations: 4914)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 5364)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:41.806486"], ["updated_at", "2023-12-06 22:14:41.806486"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.7ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.7ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.2ms | Allocations: 2089)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2422)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"Special sale!", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Special sale!"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:41.816169"], ["updated_at", "2023-12-06 22:14:41.816169"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/2
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1303)
+Started GET "/site_announcements/announcements/2" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.1ms | Allocations: 137)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.4ms | Allocations: 1485)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1947)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:41.822294"], ["updated_at", "2023-12-06 22:14:41.822294"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.7ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.8ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.4ms | Allocations: 2099)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 2431)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"", "category"=>"", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 1.4ms | Allocations: 2866)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 1.5ms | Allocations: 2914)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.9ms | Allocations: 3632)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 4298)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:41.832175"], ["updated_at", "2023-12-06 22:14:41.832175"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1324)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1486)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.2ms | Allocations: 2243)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2826)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:41.837146"], ["updated_at", "2023-12-06 22:14:41.837146"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 4.2ms | Allocations: 1297)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 4.2ms | Allocations: 1352)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 8.5ms | Allocations: 2109)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 2583)
+Started PATCH "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#update as HTML
+  Parameters: {"announcement"=>{"message"=>"Updated message", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Update Announcement", "id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Update (0.1ms)[0m  [1m[33mUPDATE "site_announcements_announcements" SET "message" = ?, "updated_at" = ? WHERE "site_announcements_announcements"."id" = ?[0m  [["message", "Updated message"], ["updated_at", "2023-12-06 22:14:41.877185"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1247)
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:14:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.1ms | Allocations: 118)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.5ms | Allocations: 945)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1344)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:56.754850"], ["updated_at", "2023-12-06 22:14:56.754850"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.3ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 11.6ms | Allocations: 13971)
+Completed 200 OK in 22ms (Views: 13.7ms | ActiveRecord: 0.1ms | Allocations: 21423)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:56.801228"], ["updated_at", "2023-12-06 22:14:56.801228"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.4ms | Allocations: 391)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.8ms | Allocations: 1160)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2676)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:56.807102"], ["updated_at", "2023-12-06 22:14:56.807102"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 9.5ms | Allocations: 3841)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 10.0ms | Allocations: 4123)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.4ms | Allocations: 4915)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 5365)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:56.821905"], ["updated_at", "2023-12-06 22:14:56.821905"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.6ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.7ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.1ms | Allocations: 2089)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2422)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"Special sale!", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Special sale!"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:56.831799"], ["updated_at", "2023-12-06 22:14:56.831799"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/2
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1303)
+Started GET "/site_announcements/announcements/2" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.1ms | Allocations: 137)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.6ms | Allocations: 1501)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1963)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:56.838479"], ["updated_at", "2023-12-06 22:14:56.838479"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.7ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.7ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.2ms | Allocations: 2095)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2427)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"", "category"=>"", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 1.5ms | Allocations: 2866)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 1.6ms | Allocations: 2914)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 2.0ms | Allocations: 3632)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4298)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:56.848193"], ["updated_at", "2023-12-06 22:14:56.848193"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1324)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1486)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.3ms | Allocations: 2243)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 2826)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:14:56.853530"], ["updated_at", "2023-12-06 22:14:56.853530"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1297)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 0.9ms | Allocations: 1352)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.3ms | Allocations: 2109)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 2583)
+Started PATCH "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#update as HTML
+  Parameters: {"announcement"=>{"message"=>"Updated message", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Update Announcement", "id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Update (0.1ms)[0m  [1m[33mUPDATE "site_announcements_announcements" SET "message" = ?, "updated_at" = ? WHERE "site_announcements_announcements"."id" = ?[0m  [["message", "Updated message"], ["updated_at", "2023-12-06 22:14:56.894933"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1247)
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:14:56 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.1ms | Allocations: 118)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.6ms | Allocations: 954)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 1353)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Big announcement"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:17:54.837599"], ["updated_at", "2023-12-06 22:17:54.837599"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2023-12-06 14:17:54 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 14114)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 19939)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.5ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Big announcement"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:18:28.664884"], ["updated_at", "2023-12-06 22:18:28.664884"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2023-12-06 14:18:28 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 14159)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 19984)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Big announcement"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:24:40.125650"], ["updated_at", "2023-12-06 22:24:40.125650"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2023-12-06 14:24:40 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 159)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 22:24:40.149990') AND (end_time IS NULL OR end_time > '2023-12-06 22:24:40.149990'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 15005)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.1ms | Allocations: 20876)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Big announcement"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:30.376998"], ["updated_at", "2023-12-06 22:25:30.376998"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2023-12-06 14:25:30 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 159)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 22:25:30.399147') AND (end_time IS NULL OR end_time > '2023-12-06 22:25:30.399147'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 15047)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.1ms | Allocations: 20918)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", "2020-01-01 01:00:00"], ["end_time", "2020-01-01 13:00:00"], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", "2019-12-31 12:00:00"], ["end_time", nil], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", "2020-01-01 13:00:00"], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", "2020-01-01 01:00:00"], ["end_time", "2020-01-01 13:00:00"], ["enabled", 0], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.4ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", "2020-01-01 13:00:00"], ["end_time", nil], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.3ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", "2019-12-31 12:00:00"], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.401712"], ["updated_at", "2023-12-06 22:25:33.401712"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.1ms | Allocations: 1140)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 16.4ms | Allocations: 13777)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 0.1ms | Allocations: 19724)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.437449"], ["updated_at", "2023-12-06 22:25:33.437449"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.3ms | Allocations: 372)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.9ms | Allocations: 1147)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 2059)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.443038"], ["updated_at", "2023-12-06 22:25:33.443038"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 4.0ms | Allocations: 3840)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 4.6ms | Allocations: 4122)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 5.7ms | Allocations: 4902)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 5351)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.453703"], ["updated_at", "2023-12-06 22:25:33.453703"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.9ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.4ms | Allocations: 2089)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 2421)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"Special sale!", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Special sale!"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.464708"], ["updated_at", "2023-12-06 22:25:33.464708"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/2
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1290)
+Started GET "/site_announcements/announcements/2" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.2ms | Allocations: 137)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.7ms | Allocations: 1498)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1959)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.471329"], ["updated_at", "2023-12-06 22:25:33.471329"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.8ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.2ms | Allocations: 2101)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2433)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"", "category"=>"", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 1.6ms | Allocations: 2866)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 1.7ms | Allocations: 2914)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 2.3ms | Allocations: 3644)
+Completed 200 OK in 8ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 4311)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.516664"], ["updated_at", "2023-12-06 22:25:33.516664"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1324)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1484)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.3ms | Allocations: 2241)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2825)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.521916"], ["updated_at", "2023-12-06 22:25:33.521916"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.6ms | Allocations: 1297)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 0.7ms | Allocations: 1352)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.0ms | Allocations: 2121)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2595)
+Started PATCH "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#update as HTML
+  Parameters: {"announcement"=>{"message"=>"Updated message", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Update Announcement", "id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Update (0.1ms)[0m  [1m[33mUPDATE "site_announcements_announcements" SET "message" = ?, "updated_at" = ? WHERE "site_announcements_announcements"."id" = ?[0m  [["message", "Updated message"], ["updated_at", "2023-12-06 22:25:33.528221"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/1
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1244)
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.1ms | Allocations: 118)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.6ms | Allocations: 948)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1347)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Big announcement"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:25:33.533054"], ["updated_at", "2023-12-06 22:25:33.533054"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2023-12-06 14:25:33 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 92)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 22:25:33.537221') AND (end_time IS NULL OR end_time > '2023-12-06 22:25:33.537221'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1541)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2501)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", "2020-01-01 01:00:00"], ["end_time", "2020-01-01 13:00:00"], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", "2019-12-31 12:00:00"], ["end_time", nil], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", "2020-01-01 13:00:00"], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", "2020-01-01 01:00:00"], ["end_time", "2020-01-01 13:00:00"], ["enabled", 0], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", "2020-01-01 13:00:00"], ["end_time", nil], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", "2019-12-31 12:00:00"], ["enabled", 1], ["created_at", "2020-01-01 12:00:00"], ["updated_at", "2020-01-01 12:00:00"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2020-01-01 12:00:00') AND (end_time IS NULL OR end_time > '2020-01-01 12:00:00'))[0m  [["enabled", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.243340"], ["updated_at", "2023-12-06 22:48:16.243340"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1140)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 16.6ms | Allocations: 13765)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.1ms | Allocations: 19725)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.278899"], ["updated_at", "2023-12-06 22:48:16.278899"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.3ms | Allocations: 372)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.9ms | Allocations: 1147)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2062)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.284245"], ["updated_at", "2023-12-06 22:48:16.284245"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 3.7ms | Allocations: 3840)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 4.0ms | Allocations: 4122)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 4.4ms | Allocations: 4902)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 5355)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.292967"], ["updated_at", "2023-12-06 22:48:16.292967"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.6ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.6ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.0ms | Allocations: 2089)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2425)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"Special sale!", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Special sale!"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.302087"], ["updated_at", "2023-12-06 22:48:16.302087"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/2
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1294)
+Started GET "/site_announcements/announcements/2" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.2ms | Allocations: 137)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.7ms | Allocations: 1486)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1949)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.308467"], ["updated_at", "2023-12-06 22:48:16.308467"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.6ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.7ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 4.5ms | Allocations: 2101)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2437)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"", "category"=>"", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 1.4ms | Allocations: 2866)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 1.5ms | Allocations: 2914)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 2.0ms | Allocations: 3633)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4302)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.351170"], ["updated_at", "2023-12-06 22:48:16.351170"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1324)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 0.9ms | Allocations: 1484)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.2ms | Allocations: 2241)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2828)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.355955"], ["updated_at", "2023-12-06 22:48:16.355955"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1297)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 0.8ms | Allocations: 1352)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.1ms | Allocations: 2121)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2598)
+Started PATCH "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#update as HTML
+  Parameters: {"announcement"=>{"message"=>"Updated message", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Update Announcement", "id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Update (0.1ms)[0m  [1m[33mUPDATE "site_announcements_announcements" SET "message" = ?, "updated_at" = ? WHERE "site_announcements_announcements"."id" = ?[0m  [["message", "Updated message"], ["updated_at", "2023-12-06 22:48:16.362016"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/1
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1246)
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.1ms | Allocations: 118)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.6ms | Allocations: 954)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1355)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Big announcement"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:48:16.366638"], ["updated_at", "2023-12-06 22:48:16.366638"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2023-12-06 14:48:16 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 92)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 22:48:16.370657') AND (end_time IS NULL OR end_time > '2023-12-06 22:48:16.370657'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1541)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 2501)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:51:41.044882"], ["updated_at", "2023-12-06 22:51:41.044882"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:51:41 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.2ms | Allocations: 13973)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 21441)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:59:02.639788"], ["updated_at", "2023-12-06 22:59:02.639788"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 22:59:25.976879"], ["updated_at", "2023-12-06 22:59:25.976879"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 14:59:25 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.2ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.5ms | Allocations: 13968)
+Completed 200 OK in 21ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 21435)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.3ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:00:26.579213"], ["updated_at", "2023-12-06 23:00:26.579213"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:00:26 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 13.4ms | Allocations: 14159)
+Completed 200 OK in 23ms (Views: 15.5ms | ActiveRecord: 0.1ms | Allocations: 21626)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.3ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:05:09.517539"], ["updated_at", "2023-12-06 23:05:09.517539"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:05:09 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1230)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:05:29.661568"], ["updated_at", "2023-12-06 23:05:29.661568"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:05:29 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 0.9ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.0ms | Allocations: 13909)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 21382)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:06:42.499307"], ["updated_at", "2023-12-06 23:06:42.499307"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:06:42 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.0ms | Allocations: 14036)
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 21509)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:07:04.894024"], ["updated_at", "2023-12-06 23:07:04.894024"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:07:04 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.0ms | Allocations: 13978)
+Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 21451)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:07:24.214999"], ["updated_at", "2023-12-06 23:07:24.214999"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:07:24 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 0.9ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.3ms | Allocations: 13952)
+Completed 200 OK in 20ms (Views: 12.4ms | ActiveRecord: 0.1ms | Allocations: 21432)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.3ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:12:13.334079"], ["updated_at", "2023-12-06 23:12:13.334079"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:12:13 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 0.8ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 9.4ms | Allocations: 13925)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 21402)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:12:53.973575"], ["updated_at", "2023-12-06 23:12:53.973575"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:12:53 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.2ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.3ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.3ms | Allocations: 13896)
+Completed 200 OK in 22ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 21652)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:13:11.023117"], ["updated_at", "2023-12-06 23:13:11.023117"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:13:11 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1522)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:14:49.102124"], ["updated_at", "2023-12-06 23:14:49.102124"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:14:49 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 9.9ms | Allocations: 13918)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 21383)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:15:35.031517"], ["updated_at", "2023-12-06 23:15:35.031517"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:15:35 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 9.7ms | Allocations: 13871)
+Completed 200 OK in 18ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 21347)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:16:05.511301"], ["updated_at", "2023-12-06 23:16:05.511301"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:16:05 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1238)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:16:18.063384"], ["updated_at", "2023-12-06 23:16:18.063384"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:16:18 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1239)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:16:52.514544"], ["updated_at", "2023-12-06 23:16:52.514544"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:16:52 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.0ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 9.3ms | Allocations: 13884)
+Completed 200 OK in 19ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 21360)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:17:12.642722"], ["updated_at", "2023-12-06 23:17:12.642722"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:17:12 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 0.9ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 9.9ms | Allocations: 13907)
+Completed 200 OK in 19ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 21383)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:21:47.935122"], ["updated_at", "2023-12-06 23:21:47.935122"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:21:47 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1542)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:21:47 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 158)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:21:47.960338') AND (end_time IS NULL OR end_time > '2023-12-06 23:21:47.960338'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 15041)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.1ms | Allocations: 19989)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:22:20.063015"], ["updated_at", "2023-12-06 23:22:20.063015"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:22:20 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1542)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:22:20 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 158)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:22:20.087806') AND (end_time IS NULL OR end_time > '2023-12-06 23:22:20.087806'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 15097)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.1ms | Allocations: 20046)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:23:24.015679"], ["updated_at", "2023-12-06 23:23:24.015679"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:23:24 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1542)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:23:24 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 158)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:23:24.043927') AND (end_time IS NULL OR end_time > '2023-12-06 23:23:24.043927'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 15050)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.1ms | Allocations: 19998)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:23:57.640420"], ["updated_at", "2023-12-06 23:23:57.640420"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:23:57 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1542)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:23:57 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 158)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:23:57.670876') AND (end_time IS NULL OR end_time > '2023-12-06 23:23:57.670876'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 14982)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.1ms | Allocations: 19930)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:25:13.841028"], ["updated_at", "2023-12-06 23:25:13.841028"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:25:13 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.2ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 9.6ms | Allocations: 13889)
+Completed 200 OK in 20ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 21357)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:25:58.672967"], ["updated_at", "2023-12-06 23:25:58.672967"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:25:58 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.2ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 12.0ms | Allocations: 14154)
+Completed 200 OK in 24ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 21622)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:04.116916"], ["updated_at", "2023-12-06 23:26:04.116916"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:26:04 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1542)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:04 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 158)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:04.140812') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:04.140812'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 15024)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 19972)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:24.339792"], ["updated_at", "2023-12-06 23:26:24.339792"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:26:24 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.4ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 11.8ms | Allocations: 14012)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.1ms | Allocations: 21480)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.384168"], ["updated_at", "2023-12-06 23:26:31.384168"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.1ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 10.7ms | Allocations: 13952)
+Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 21420)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.430457"], ["updated_at", "2023-12-06 23:26:31.430457"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 343)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 92)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:31.436362') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:31.436362'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2136)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3108)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.438845"], ["updated_at", "2023-12-06 23:26:31.438845"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 278)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:31.447967') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:31.447967'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 895)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1188)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.450155"], ["updated_at", "2023-12-06 23:26:31.450155"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 278)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:31.453644') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:31.453644'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 890)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1181)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.464657"], ["updated_at", "2023-12-06 23:26:31.464657"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 278)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:31.467635') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:31.467635'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 891)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1183)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.470344"], ["updated_at", "2023-12-06 23:26:31.470344"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 278)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:31.473242') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:31.473242'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 890)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1181)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.475638"], ["updated_at", "2023-12-06 23:26:31.475638"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 278)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:31.479134') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:31.479134'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 890)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1181)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.482453"], ["updated_at", "2023-12-06 23:26:31.482453"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 278)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:31.485294') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:31.485294'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 893)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1184)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:26:31.487430"], ["updated_at", "2023-12-06 23:26:31.487430"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 278)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 10)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:26:31.497512') AND (end_time IS NULL OR end_time > '2023-12-06 23:26:31.497512'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 891)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 1182)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:01.910067"], ["updated_at", "2023-12-06 23:27:01.910067"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 1.2ms | Allocations: 1285)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 9.4ms | Allocations: 13917)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 21386)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:01.950922"], ["updated_at", "2023-12-06 23:27:01.950922"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_auth rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 343)
+Started GET "/" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 92)
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."enabled" = ? AND ((start_time IS NULL OR start_time < '2023-12-06 23:27:01.962505') AND (end_time IS NULL OR end_time > '2023-12-06 23:27:01.962505'))[0m  [["enabled", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2140)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 3113)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:01.965570"], ["updated_at", "2023-12-06 23:27:01.965570"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#index as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements"[0m
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/index.html.erb within layouts/site_announcements/application (Duration: 0.4ms | Allocations: 469)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.9ms | Allocations: 1248)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 1584)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:01.969813"], ["updated_at", "2023-12-06 23:27:01.969813"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.1ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.6ms | Allocations: 372)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.0ms | Allocations: 1135)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 2042)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:01.975559"], ["updated_at", "2023-12-06 23:27:01.975559"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 3.4ms | Allocations: 3838)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 3.8ms | Allocations: 4120)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 4.1ms | Allocations: 4900)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 5355)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.3ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:01.983878"], ["updated_at", "2023-12-06 23:27:01.983878"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.8ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 0.8ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.2ms | Allocations: 2101)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2439)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"Special sale!", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.2ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Special sale!"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:01.993268"], ["updated_at", "2023-12-06 23:27:01.993268"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/2
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1264)
+Started GET "/site_announcements/announcements/2" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.1ms | Allocations: 137)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.2ms | Allocations: 1507)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1972)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:01.998712"], ["updated_at", "2023-12-06 23:27:01.998712"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/new" for 127.0.0.1 at 2023-12-06 15:27:01 -0800
+Processing by SiteAnnouncements::AnnouncementsController#new as HTML
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 9.3ms | Allocations: 1269)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 9.5ms | Allocations: 1324)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 18.6ms | Allocations: 2089)
+Completed 200 OK in 23ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 2427)
+Started POST "/site_announcements/announcements" for 127.0.0.1 at 2023-12-06 15:27:02 -0800
+Processing by SiteAnnouncements::AnnouncementsController#create as HTML
+  Parameters: {"announcement"=>{"message"=>"", "category"=>"", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Create Announcement"}
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 1.5ms | Allocations: 2866)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/new.html.erb within layouts/site_announcements/application (Duration: 1.5ms | Allocations: 2914)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 2.1ms | Allocations: 3644)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 4315)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:02.043347"], ["updated_at", "2023-12-06 23:27:02.043347"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 15:27:02 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.7ms | Allocations: 1324)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 0.9ms | Allocations: 1484)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 1.2ms | Allocations: 2253)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2842)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Create (0.1ms)[0m  [1m[32mINSERT INTO "site_announcements_announcements" ("message", "category", "start_time", "end_time", "enabled", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["message", "Test message"], ["category", "info"], ["start_time", nil], ["end_time", nil], ["enabled", 1], ["created_at", "2023-12-06 23:27:02.048240"], ["updated_at", "2023-12-06 23:27:02.048240"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/site_announcements/announcements/1/edit" for 127.0.0.1 at 2023-12-06 15:27:02 -0800
+Processing by SiteAnnouncements::AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/_form.html.erb (Duration: 0.5ms | Allocations: 1297)
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/edit.html.erb within layouts/site_announcements/application (Duration: 0.6ms | Allocations: 1352)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.9ms | Allocations: 2109)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2588)
+Started PATCH "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 15:27:02 -0800
+Processing by SiteAnnouncements::AnnouncementsController#update as HTML
+  Parameters: {"announcement"=>{"message"=>"Updated message", "category"=>"info", "start_time"=>"", "end_time"=>"", "enabled"=>"1"}, "commit"=>"Update Announcement", "id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSiteAnnouncements::Announcement Update (0.1ms)[0m  [1m[33mUPDATE "site_announcements_announcements" SET "message" = ?, "updated_at" = ? WHERE "site_announcements_announcements"."id" = ?[0m  [["message", "Updated message"], ["updated_at", "2023-12-06 23:27:02.053454"], ["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/site_announcements/announcements/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1249)
+Started GET "/site_announcements/announcements/1" for 127.0.0.1 at 2023-12-06 15:27:02 -0800
+Processing by SiteAnnouncements::AnnouncementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSiteAnnouncements::Announcement Load (0.0ms)[0m  [1m[34mSELECT "site_announcements_announcements".* FROM "site_announcements_announcements" WHERE "site_announcements_announcements"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb
+  Rendering /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application
+  Rendered /Users/darin/work/ir/ucb/site_announcements/app/views/site_announcements/announcements/show.html.erb within layouts/site_announcements/application (Duration: 0.1ms | Allocations: 118)
+  Rendered layout /Users/darin/work/ir/ucb/site_announcements/app/views/layouts/site_announcements/application.html.erb (Duration: 0.7ms | Allocations: 954)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 1357)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m

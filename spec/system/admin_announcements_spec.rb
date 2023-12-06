@@ -1,15 +1,26 @@
 require "rails_helper"
-require "site_announcements/engine"
 
 RSpec.describe "Administering announcements", type: :system do
-  include SiteAnnouncements::Engine.routes.url_helpers
+  let!(:announcement) { SiteAnnouncements::Announcement.create!(message: "Test message", category: "info") }
 
-  let!(:announcement) { SiteAnnouncements::Announcement.create!(message: "Test", category: "info") }
+  describe "authorization" do
+    it "allows access if the auth callback permits it" do
+      visit announcements_path
+      expect(page).not_to have_content("This is home")
+    end
+
+    it "blocks access if the auth callback does not permit it" do
+      SiteAnnouncements::Engine.config.auth_callback = ->(controller) { false }
+      visit announcements_path
+      expect(page).to have_content("This is home")
+      SiteAnnouncements::Engine.config.auth_callback = ->(controller) { true }
+    end
+  end
 
   describe "GET /index" do
     it "displays existing announcements" do
       visit announcements_path
-      expect(page).to have_content("Test")
+      expect(page).to have_content("Test message")
     end
   end
 
@@ -17,7 +28,7 @@ RSpec.describe "Administering announcements", type: :system do
     it "displays announcement details" do
       visit announcement_path(announcement)
 
-      expect(page).to have_content("Test")
+      expect(page).to have_content("Test message")
       expect(page).to have_content("info")
     end
   end
@@ -55,7 +66,7 @@ RSpec.describe "Administering announcements", type: :system do
     it "displays form to edit announcement" do
       visit edit_announcement_path(announcement)
 
-      expect(page).to have_field("Message", with: "Test")
+      expect(page).to have_field("Message", with: "Test message")
     end
   end
 
@@ -78,7 +89,7 @@ RSpec.describe "Administering announcements", type: :system do
         click_on "Delete"
       }
 
-      expect(page).not_to have_content("Test")
+      expect(page).not_to have_content("Test message")
     end
   end
 

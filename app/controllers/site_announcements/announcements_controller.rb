@@ -2,6 +2,7 @@ module SiteAnnouncements
   class AnnouncementsController < ApplicationController
 
     # Controller concerns
+    before_action :check_auth
     before_action :set_announcement, only: [:show, :edit, :update, :destroy]
 
     # GET /announcements
@@ -49,6 +50,14 @@ module SiteAnnouncements
     end
 
     private
+
+    def check_auth
+      callback = SiteAnnouncements::Engine.config.auth_callback
+      if callback.present? && !callback.call(self)
+        flash[:error] = "You are not authorized to access this page"
+        return redirect_to "/"
+      end
+    end
 
     # Use callbacks to share common setup
     def set_announcement
