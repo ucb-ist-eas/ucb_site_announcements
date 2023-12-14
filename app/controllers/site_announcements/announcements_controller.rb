@@ -1,29 +1,23 @@
 module SiteAnnouncements
-  class AnnouncementsController < ApplicationController
-
-    # Controller concerns
+  class AnnouncementsController < ::ApplicationController
+    around_action :set_time_zone
     before_action :check_auth
     before_action :set_announcement, only: [:show, :edit, :update, :destroy]
 
-    # GET /announcements
     def index
       @announcements = Announcement.all
     end
 
-    # GET /announcements/1
     def show
     end
 
-    # GET /announcements/new
     def new
       @announcement = Announcement.new
     end
 
-    # GET /announcements/1/edit
     def edit
     end
 
-    # POST /announcements
     def create
       @announcement = Announcement.new(announcement_params)
 
@@ -34,7 +28,6 @@ module SiteAnnouncements
       end
     end
 
-    # PATCH/PUT /announcements/1
     def update
       if @announcement.update(announcement_params)
         redirect_to @announcement, notice: "Announcement was successfully updated."
@@ -43,7 +36,6 @@ module SiteAnnouncements
       end
     end
 
-    # DELETE /announcements/1
     def destroy
       @announcement.destroy
       redirect_to announcements_url, notice: "Announcement was successfully destroyed."
@@ -51,20 +43,21 @@ module SiteAnnouncements
 
     private
 
+    def set_time_zone(&block)
+      Time.use_zone(SiteAnnouncements.time_zone, &block)
+    end
+
     def check_auth
-      callback = SiteAnnouncements::Engine.config.auth_callback
+      callback = SiteAnnouncements.auth_callback
       if callback.present? && !callback.call(self)
-        flash[:error] = "You are not authorized to access this page"
-        return redirect_to "/"
+        redirect_to "/", alert: "You are not authorized to access this page"
       end
     end
 
-    # Use callbacks to share common setup
     def set_announcement
       @announcement = Announcement.find(params[:id])
     end
 
-    # Only allow whitelist of parameters
     def announcement_params
       params.require(:announcement).permit(:message, :category, :start_time, :end_time, :enabled)
     end

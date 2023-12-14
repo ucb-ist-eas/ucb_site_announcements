@@ -1,1 +1,3 @@
-SiteAnnouncements::Engine.config.auth_callback = ->(controller) { true }
+SiteAnnouncements.configure do |config|
+  config.auth_callback = ->(controller) { true }
+end

@@ -6,14 +6,44 @@ RSpec.describe "Administering announcements", type: :system do
   describe "authorization" do
     it "allows access if the auth callback permits it" do
       visit announcements_path
-      expect(page).not_to have_content("This is home")
+      expect(page).not_to have_content("You are not authorized")
     end
 
     it "blocks access if the auth callback does not permit it" do
-      SiteAnnouncements::Engine.config.auth_callback = ->(controller) { false }
+      SiteAnnouncements.configure do |config|
+        config.auth_callback = ->(controller) { false }
+      end
       visit announcements_path
-      expect(page).to have_content("This is home")
-      SiteAnnouncements::Engine.config.auth_callback = ->(controller) { true }
+      expect(page).to have_content("You are not authorized")
+      SiteAnnouncements.configure do |config|
+        config.auth_callback = ->(controller) { true }
+      end
+    end
+  end
+
+  describe "time zone config" do
+    it "stores times in utc and displays in configured time zone" do
+      current_time_zone = SiteAnnouncements.time_zone
+      SiteAnnouncements.configure do |config|
+        config.time_zone = "Eastern Time (US & Canada)"
+      end
+      local_time = Time.zone.parse("2023-01-01 10:00:00 Eastern Time (US & Canada)")
+
+      visit new_announcement_path
+      fill_in "Message", with: "Special sale!"
+      select "Info", from: "Category"
+      fill_in "Start time", with: local_time
+
+      click_on "Create Announcement"
+
+      expect(SiteAnnouncements::Announcement.last.start_time).to eq(local_time.utc)
+
+      visit announcement_path(SiteAnnouncements::Announcement.last)
+
+      expect(page).to have_content("01/01/2023 10:00 am")
+      SiteAnnouncements.configure do |config|
+        config.time_zone = current_time_zone
+      end
     end
   end
 
