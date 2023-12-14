@@ -1,6 +1,6 @@
 # Site Announcements Engine
 
-The Site Announcements Engine provides administrator management and site display for timed announcements.
+The site_announcements engine provides administrator management and site display for timed announcements.
 
 ## Prerequisites
 
@@ -22,20 +22,31 @@ gem "site_announcements"
 3. Mount the engine in `config/routes.rb`:
 
 ```ruby
-mount SiteAnnouncements::Engine => "/announcements"
+mount SiteAnnouncements::Engine => "/announcements" # set whatever URL you'd like to use here
 ```
 
-4. Configure Admin Authorization - this will control who can add/edit/delete announcements:
+4. Set up a configuration block in `config/initializers/site_announcements.rb` - `auth_callback` is required.
 
 ```ruby
 # config/initializers/site_announcements.rb
-SiteAnnouncements::Engine.config.auth_callback = ->(controller) {
-  # implement whatever auth logic makes sense for your app
-  # controller.current_user.admin?
-}
+SiteAnnouncements.configure do |config|
+  config.auth_callback = ->(controller) {
+    # This will be called in the admin controller to determine if the current user can make changes
+    # to the announcements
+    #
+    # "controller" is the current controller instance so it will have access to anything defined in your
+    # ApplicationController
+    #
+    # Return true if the current user can view/edit announcements; false otherwise
+    #
+    # Example:
+    # controller.current_user.admin?
+  }
+  config.time_zone = "Pacific Time (US & Canada)"
+end
 ```
 
-If you don't set this, any user can access the admin interface, which is probably not what you want.
+`time_zone` is optional, but will default to `Pacific Time (US & Canada)`
 
 5. Migrate the database:
 
@@ -44,7 +55,9 @@ rake site_announcements:install:migrations
 rake db:migrate
 ```
 
-6. Access engine admin at `/announcements/admin`
+## Creating and Managing Announcements
+
+Access the admin inteface at, e.g. `/announcements/admin` (assuming you set the mount point at `announcements` in step 3)
 
 ## Displaying Announcements
 
