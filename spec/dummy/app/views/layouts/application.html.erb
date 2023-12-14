@@ -6,27 +6,35 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- CDN links for Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
     <%= stylesheet_link_tag "application" %>
   </head>
 
   <body>
-    <%= active_site_announcements %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= active_site_announcements %>
 
-    <% if notice %>
-      <div class="alert alert-info alert-dismissible fade show" role="alert">
-        <%= notice %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <% if notice %>
+            <div class="alert alert-info alert-dismissible show" role="alert">
+              <%= notice %>
+            </div>
+          <% end %>
+
+          <% if alert %>
+            <div class="alert alert-warning alert-dismissible show" role="alert">
+              <%= alert %>
+            </div>
+          <% end %>
+
+          <%= yield %>
+        </div>
       </div>
-    <% end %>
-
-    <% if alert %>
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <%= alert %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    <% end %>
-
-    <%= yield %>
-
+    </div>
   </body>
 </html>

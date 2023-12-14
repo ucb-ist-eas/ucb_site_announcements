@@ -8,7 +8,7 @@ module SiteAnnouncements
   def self.configure(&block)
     configuration = OpenStruct.new(time_zone: Time.zone, auth_callback: nil)
     yield configuration if block
-    self.time_zone = configuration.time_zone
+    self.time_zone = configuration.time_zone || "Pacific Time (US & Canada)"
     self.auth_callback = configuration.auth_callback
   end
 end

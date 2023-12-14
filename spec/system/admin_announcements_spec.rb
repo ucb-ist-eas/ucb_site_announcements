@@ -112,7 +112,7 @@ RSpec.describe "Administering announcements", type: :system do
   end
 
   describe "DELETE /destroy", js: true do
-    xit "deletes announcement" do
+    it "deletes announcement" do
       visit announcements_path
 
       accept_alert {
