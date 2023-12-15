@@ -48,6 +48,9 @@ end
 
 `time_zone` is optional, but will default to `Pacific Time (US & Canada)`
 
+> [!CAUTION]
+> If you don't provide a setting for `auth_callback` all users will be able to access the admin section for announcements, which is probably not what you want.
+
 5. Migrate the database:
 
 ```
