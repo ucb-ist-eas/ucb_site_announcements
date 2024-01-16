@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :site_announcements do
+# task :ucb_site_announcements do
 #   # Task goes here
 # end

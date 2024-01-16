@@ -1,4 +1,4 @@
-module SiteAnnouncements
+module UcbSiteAnnouncements
   class Announcement < ApplicationRecord
     validates_presence_of :message, :category
 

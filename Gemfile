@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Specify your gem's dependencies in site_announcements.gemspec.
+# Specify your gem's dependencies in ucb_site_announcements.gemspec.
 gemspec
 
 gem "puma"

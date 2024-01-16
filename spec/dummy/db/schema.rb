@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2023_12_06_192929) do
-  create_table "site_announcements_announcements", force: :cascade do |t|
+  create_table "ucb_site_announcements_announcements", force: :cascade do |t|
     t.string "message", null: false
     t.string "category", null: false
     t.datetime "start_time"
@@ -19,8 +19,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_192929) do
     t.boolean "enabled", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["end_time"], name: "index_site_announcements_announcements_on_end_time"
-    t.index ["start_time"], name: "index_site_announcements_announcements_on_start_time"
+    t.index ["end_time"], name: "index_ucb_site_announcements_announcements_on_end_time"
+    t.index ["start_time"], name: "index_ucb_site_announcements_announcements_on_start_time"
   end
 
 end

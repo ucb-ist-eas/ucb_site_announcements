@@ -1,6 +1,6 @@
 # Site Announcements Engine
 
-The site_announcements engine provides administrator management and site display for timed announcements.
+The ucb_site_announcements engine provides administrator management and site display for timed announcements.
 
 ## Prerequisites
 
@@ -22,14 +22,14 @@ gem "ucb_site_announcements"
 3. Mount the engine in `config/routes.rb`:
 
 ```ruby
-mount SiteAnnouncements::Engine => "/announcements" # set whatever URL you'd like to use here
+mount UcbSiteAnnouncements::Engine => "/announcements" # set whatever URL you'd like to use here
 ```
 
-4. Set up a configuration block in `config/initializers/site_announcements.rb` - `auth_callback` is required.
+4. Set up a configuration block in `config/initializers/ucb_site_announcements.rb` - `auth_callback` is required.
 
 ```ruby
-# config/initializers/site_announcements.rb
-SiteAnnouncements.configure do |config|
+# config/initializers/ucb_site_announcements.rb
+UcbSiteAnnouncements.configure do |config|
   config.auth_callback = ->(controller) {
     # This will be called in the admin controller to determine if the current user can make changes
     # to the announcements
@@ -54,7 +54,7 @@ end
 5. Migrate the database:
 
 ```
-rake site_announcements:install:migrations
+rake ucb_site_announcements:install:migrations
 rake db:migrate
 ```
 
