@@ -1,7 +1,7 @@
 require_relative "lib/site_announcements/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "site_announcements"
+  spec.name        = "ucb_site_announcements"
   spec.version     = SiteAnnouncements::VERSION
   spec.authors     = ["Darin Wilson"]
   spec.email       = ["darinwilson@berkeley.edu"]
@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
     Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "rails", ">= 7.0.8"
+  spec.add_dependency "rails", ">= 7.0"
 
   spec.add_development_dependency "standard"
   spec.add_development_dependency "rspec-rails", "~> 6.1.0"

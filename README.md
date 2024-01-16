@@ -14,7 +14,7 @@ To add the engine to a Rails application:
 1. Add the gem to your Gemfile:
 
 ```ruby
-gem "site_announcements"
+gem "ucb_site_announcements"
 ```
 
 2. Run `bundle install`
