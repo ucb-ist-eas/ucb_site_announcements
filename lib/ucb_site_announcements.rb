@@ -1,7 +1,7 @@
-require "site_announcements/version"
-require "site_announcements/engine"
+require "ucb_site_announcements/version"
+require "ucb_site_announcements/engine"
 
-module SiteAnnouncements
+module UcbSiteAnnouncements
   mattr_accessor :time_zone
   mattr_accessor :auth_callback
 

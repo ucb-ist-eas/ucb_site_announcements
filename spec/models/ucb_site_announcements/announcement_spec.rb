@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe SiteAnnouncements::Announcement, type: :model do
+RSpec.describe UcbSiteAnnouncements::Announcement, type: :model do
 
   before(:each) do
     # Freeze time
@@ -13,7 +13,7 @@ RSpec.describe SiteAnnouncements::Announcement, type: :model do
     # Valid scenarios
     it "includes enabled with no time range" do
       announcement = create_announcement(enabled: true)
-      expect(SiteAnnouncements::Announcement.active).to eq [announcement]
+      expect(UcbSiteAnnouncements::Announcement.active).to eq [announcement]
     end
 
     it "includes enabled with matching time range" do
@@ -23,7 +23,7 @@ RSpec.describe SiteAnnouncements::Announcement, type: :model do
         end_time: 1.hour.from_now
       )
 
-      expect(SiteAnnouncements::Announcement.active).to eq [announcement]
+      expect(UcbSiteAnnouncements::Announcement.active).to eq [announcement]
     end
 
     it "includes enabled with start time in past" do
@@ -32,7 +32,7 @@ RSpec.describe SiteAnnouncements::Announcement, type: :model do
         start_time: 1.day.ago
       )
 
-      expect(SiteAnnouncements::Announcement.active).to eq [announcement]
+      expect(UcbSiteAnnouncements::Announcement.active).to eq [announcement]
     end
 
     it "includes enabled with end time in future" do
@@ -41,7 +41,7 @@ RSpec.describe SiteAnnouncements::Announcement, type: :model do
         end_time: 1.hour.from_now
       )
 
-      expect(SiteAnnouncements::Announcement.active).to eq [announcement]
+      expect(UcbSiteAnnouncements::Announcement.active).to eq [announcement]
     end
 
     # Invalid scenarios
@@ -52,7 +52,7 @@ RSpec.describe SiteAnnouncements::Announcement, type: :model do
         end_time: 1.hour.from_now
       )
 
-      expect(SiteAnnouncements::Announcement.active).to eq []
+      expect(UcbSiteAnnouncements::Announcement.active).to eq []
     end
 
     it "excludes enabled with start time in future" do
@@ -61,7 +61,7 @@ RSpec.describe SiteAnnouncements::Announcement, type: :model do
         start_time: 1.hour.from_now
       )
 
-      expect(SiteAnnouncements::Announcement.active).to eq []
+      expect(UcbSiteAnnouncements::Announcement.active).to eq []
     end
 
     it "excludes enabled with end time in past" do
@@ -70,13 +70,13 @@ RSpec.describe SiteAnnouncements::Announcement, type: :model do
         end_time: 1.day.ago
       )
 
-      expect(SiteAnnouncements::Announcement.active).to eq []
+      expect(UcbSiteAnnouncements::Announcement.active).to eq []
     end
 
   end
 
   def create_announcement(options = {})
-    SiteAnnouncements::Announcement.create!(
+    UcbSiteAnnouncements::Announcement.create!(
       {
         message: "Test",
         category: "info"

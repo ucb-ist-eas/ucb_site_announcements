@@ -1,4 +1,4 @@
-module SiteAnnouncements
+module UcbSiteAnnouncements
   class AnnouncementsController < ::ApplicationController
     around_action :set_time_zone
     before_action :check_auth
@@ -44,11 +44,11 @@ module SiteAnnouncements
     private
 
     def set_time_zone(&block)
-      Time.use_zone(SiteAnnouncements.time_zone, &block)
+      Time.use_zone(UcbSiteAnnouncements.time_zone, &block)
     end
 
     def check_auth
-      callback = SiteAnnouncements.auth_callback
+      callback = UcbSiteAnnouncements.auth_callback
       if callback.present? && !callback.call(self)
         redirect_to "/", alert: "You are not authorized to access this page"
       end

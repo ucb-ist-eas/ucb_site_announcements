@@ -1,11 +1,11 @@
-require_relative "lib/site_announcements/version"
+require_relative "lib/ucb_site_announcements/version"
 
 Gem::Specification.new do |spec|
   spec.name        = "ucb_site_announcements"
-  spec.version     = SiteAnnouncements::VERSION
+  spec.version     = UcbSiteAnnouncements::VERSION
   spec.authors     = ["Darin Wilson"]
   spec.email       = ["darinwilson@berkeley.edu"]
-  spec.homepage    = "https://github.com/ucb-ist-eas/site_announcements"
+  spec.homepage    = "https://github.com/ucb-ist-eas/ucb_site_announcements"
   spec.summary     = "A Rails engine for site-wide announcement banners"
   spec.description = spec.summary
   spec.license     = "MIT"

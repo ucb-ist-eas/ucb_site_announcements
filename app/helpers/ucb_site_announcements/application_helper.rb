@@ -1,4 +1,4 @@
-module SiteAnnouncements
+module UcbSiteAnnouncements
   module ApplicationHelper
     def active_site_announcements
       Announcement.active.map do |a|

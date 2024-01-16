@@ -1,6 +1,6 @@
-module SiteAnnouncements
+module UcbSiteAnnouncements
   class Engine < ::Rails::Engine
-    isolate_namespace SiteAnnouncements
+    isolate_namespace UcbSiteAnnouncements
 
     config.generators do |g|
       g.test_framework :rspec
@@ -8,7 +8,7 @@ module SiteAnnouncements
 
     initializer 'local_helper.action_controller' do
       ActiveSupport.on_load :action_controller do
-        helper SiteAnnouncements::ApplicationHelper
+        helper UcbSiteAnnouncements::ApplicationHelper
       end
     end
   end

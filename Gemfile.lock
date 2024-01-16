@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    site_announcements (0.1.0)
-      rails (>= 7.0.8)
+    ucb_site_announcements (0.1.0)
+      rails (>= 7.0)
 
 GEM
   remote: https://rubygems.org/
@@ -133,7 +133,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.20.0)
     mutex_m (0.2.0)
-    net-imap (0.4.7)
+    net-imap (0.4.9)
       date
       net-protocol
     net-pop (0.1.2)
@@ -284,10 +284,10 @@ DEPENDENCIES
   puma
   rspec-rails (~> 6.1.0)
   selenium-webdriver
-  site_announcements!
   sprockets-rails
   sqlite3
   standard
+  ucb_site_announcements!
 
 BUNDLED WITH
    2.4.7
